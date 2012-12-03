@@ -26,13 +26,13 @@ h2. Használat
 
 h3. HTML
 
-A <head>-be:
+A head-be:
 
 <pre>
 <script src="js/jquery/jquery.fpsSelect.min.js"></script>
 </pre>
 
-A <body>-ba:
+A body-ba:
 
 <pre>
 <select id="select">
@@ -92,7 +92,7 @@ h2. Opciók
 * selectHeight: 20 // (int) a select magassága
 * containerClass: '' // (string) a .fpsContainer class-hoz lesz hozzáadva ez a sztring
 * designClass: '' // (string) a .fpsSelect class-hoz lesz hozzáadva ez a sztring
-* dev: false // (bool) true értéknél ír ki a konzolra developer infókat és pirosra színezi az amúgy teljesen áttetsző <select> elemet
+* dev: false // (bool) true értéknél ír ki a konzolra developer infókat és pirosra színezi az amúgy teljesen áttetsző select elemet
 
 
 
@@ -105,7 +105,7 @@ h2. Changelog
 
 * a container divet is magától hozzá létre a script
 * több CSS kiegészítést ad a script
-* amennyiben a <select> elemenek nincs id-je, egy alert ablak figyelmeztet az oldal betöltésekor
+* amennyiben a select elemenek nincs id-je, egy alert ablak figyelmeztet az oldal betöltésekor
 
 *Version 1.0*
 
