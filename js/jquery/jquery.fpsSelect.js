@@ -1,4 +1,4 @@
-// fpsSelect jQuery plugin v1.1 http://wiki.fps2.hu/index.php/CustomSelect
+// fpsSelect jQuery plugin v1.1 https://github.com/fpshu/fpsSelect
 (function( $ ){
 	$.fn.fpsSelect = function( options ) {
 		
