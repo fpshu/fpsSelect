@@ -1,0 +1,123 @@
+h2. fpsSelect jQuery plugin
+
+*Version:* 1.1
+
+*License:* "jQuery License":http://docs.jquery.com/License
+
+*Author:* "Gergő Németh":http://reden87.info/
+
+*Size:* ~1KB
+
+
+
+
+
+h2. Leírás
+
+A plugin lehetővé teszi, hogy gyorsan és egyszerűen egyedi kinézetű select elemeket készítsünk.
+Ezzel a kiegészítővel a legördülő menü részt nem tudjuk testre szabni, az marad a használt operációs rendszer szerinti default megjelenésű!
+
+
+
+
+
+h2. Használat
+
+
+h3. HTML
+
+A <head>-be:
+
+<pre>
+<script src="js/jquery/jquery.fpsSelect.min.js"></script>
+</pre>
+
+A <body>-ba:
+
+<pre>
+<select id="select">
+	<option>Bármi</option>
+	<option>Kuponajánlatok</option>
+	<option>Webshop termékek</option>
+	<option>Kedvezményt nyújtó helyek</option>
+</select>
+</pre>
+
+
+h3. HTML amit a script generál
+
+<pre>
+<div class="select_container fpsContainer " style="position: relative; width: 175px; height: 35px;">
+	<div class="select fpsSelect ">
+		<span class="customSelect_text">Bármi</span>
+	</div>
+	<select id="select" style="position: absolute; top: 0px; left: 0px; padding: 0px; margin: 0px; border: 0px; width: 175px; height: 35px; opacity: 0; cursor: pointer;">
+		<option>Bármi</option>
+		<option>Kuponajánlatok</option>
+		<option>Webshop termékek</option>
+		<option>Kedvezményt nyújtó helyek</option>
+	</select>
+</div>
+</pre>
+
+
+h3. CSS
+
+A következő elemeket kell megformáznunk CSS-ben, ha a példa szerint dolgozunk:
+
+* .select_container.fpsContainer {} (a tartalmazó div, amit a plugin a select köré generál) a div class a következő módon lesz generálva: "[a select id-je]_container fpsContainer [egyéb hozzácsapott string amik jQuery opciókból jönnek]"
+* .select.fpsSelect {} (ezt a divet is a script hozza létre magának a select elem elé) a div class-ja a következő módon lesz generálva: "[a select id-je] fpsSelect [egyéb hozzácsapott id-k amik jQuery option-ből jönnek]"
+* .select.fpsSelect.hover {} (a script a .hover classt adja hozzá a divhez ha az egér fölé ér vagy focusba kerül, a :hover nem fog működni!)
+
+
+h3. jQuery
+
+<pre>
+$('#select')
+	.fpsSelect({
+		selectWidth: 175,
+		selectHeight: 35
+	}).change(function() {
+		console.log( 'select changed' );
+	});
+</pre>
+
+
+
+
+
+h2. Opciók
+
+* selectWidth: 150 // (int) a select szélessége
+* selectHeight: 20 // (int) a select magassága
+* containerClass: '' // (string) a .fpsContainer class-hoz lesz hozzáadva ez a sztring
+* designClass: '' // (string) a .fpsSelect class-hoz lesz hozzáadva ez a sztring
+* dev: false // (bool) true értéknél ír ki a konzolra developer infókat és pirosra színezi az amúgy teljesen áttetsző <select> elemet
+
+
+
+
+
+
+h2. Changelog
+
+*Version 1.1*
+
+* a container divet is magától hozzá létre a script
+* több CSS kiegészítést ad a script
+* amennyiben a <select> elemenek nincs id-je, egy alert ablak figyelmeztet az oldal betöltésekor
+
+*Version 1.0*
+
+* első verzió
+* automatikusan ad stílust a select-nek
+* automatikusan beilleszti a div-et amit majd formázni kell
+
+
+
+
+
+
+h2. Tervezett feature lista
+
+* egyelőre nincs

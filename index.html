@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="hu" lang="hu">
+
+<!-- ==============================================================
+				  Az oldalt készítette:
+					 Németh Gergő
+						http://reden87.info/
+	 =============================================================== -->
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title></title>
+	
+	<link href="css/style.css" rel="stylesheet" media="all">
+	<style>
+		.fpsContainer {
+			margin: 0 auto;
+		}
+		
+		.select {
+			width: 138px;
+			height: 33px;
+			float: left;
+			padding: 0 25px 0 10px;
+			overflow: hidden;
+			border: 1px solid #d0d0d0;
+			background: #fff url('css/img/select_arrow.png') no-repeat 150px center;
+			color: #666;
+			font: 11px/34px 'Arial', 'Helvetica', sans-serif;
+		}
+		.select.hover {
+			border-color: #666 !important;
+		}
+	</style>
+	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/jquery/jquery.fpsSelect.js"></script>
+	<script>
+		$(function() {
+			$('#select')
+				.fpsSelect({
+					selectWidth: 175,
+					selectHeight: 35
+				}).change(function() {
+					console.log( 'select changed' );
+				});
+		});
+	</script>
+</head>
+
+
+<body>
+	
+	
+	<select id="select">
+		<option>Bármi</option>
+		<option>Kuponajánlatok</option>
+		<option>Webshop termékek</option>
+		<option>Kedvezményt nyújtó helyek</option>
+	</select>
+	
+	
+</body>
+</html>
